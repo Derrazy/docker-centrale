@@ -7,7 +7,7 @@ RUN apt-get update && apt-get -y install nginx
 
 RUN echo "daemon,off;" >> /etc/nginx/nginx.conf
 
-ADD index.html /var/www/html/index.html
+ADD index.html /Users/usersio/docker-centrale
 
 VOLUME /var/www/html
 
