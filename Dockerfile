@@ -1,8 +1,14 @@
 
 FROM ubuntu
 
+FROM ubuntu
+
 RUN apt-get update && apt-get -y install nginx
 
-EXPOSE 80
+RUN echo "daemon,off;" >> /etc/nginx/nginx.conf
 
-CMD ["nginx", "-g", "daemon off;"]
+ADD index.html /var/www/html/index.html
+
+VOLUME /var/www/html
+
+EXPOSE 80
